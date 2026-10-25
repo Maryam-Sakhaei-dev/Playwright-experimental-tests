@@ -23,7 +23,7 @@ test("Frames demo", async ({ page }) => {
   inputbox.fill("Maryam");
   await page.waitForTimeout(5000);
 });
-test.only("Inner Frames demo", async ({ page }) => {
+test("Inner Frames demo", async ({ page }) => {
   await page.goto("https://ui.vision/demo/webtest/frames/");
   const frame3 = await page.frame({
     url: "https://ui.vision/demo/webtest/frames/frame_3",

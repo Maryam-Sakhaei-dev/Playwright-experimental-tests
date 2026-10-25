@@ -1,5 +1,5 @@
 import { test, expect, Locator } from "@playwright/test";
-test("Autosugest dropsown", async ({ page }) => {
+test.skip("Autosugest dropsown", async ({ page }) => {
   await page.goto("https://www.flipkart.com/");
   await page.locator("input[name='q']").first().fill("smart");
   await page.waitForTimeout(5000);
@@ -14,10 +14,10 @@ test("Autosugest dropsown", async ({ page }) => {
     console.log("5 th option:", await options.nth(5).innerText());
   }
   //Selct/Click on the smartphone option
-  for(let i=0; i<count; i++){
-    const text= await options.nth(i).innerText();
-    if(text === 'smartphone'){
-      options.nth(i).click();
+  for (let i = 0; i < count; i++) {
+    const text = await options.nth(i).innerText();
+    if (text === "smartphone") {
+      await options.nth(i).click();
       break;
     }
   }

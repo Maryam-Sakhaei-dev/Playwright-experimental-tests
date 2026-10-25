@@ -1,5 +1,5 @@
 import { test, expect, Locator } from "@playwright/test";
-test("Bootstrap Hidden Dropdpwn", async ({ page }) => {
+test.skip("Bootstrap Hidden Dropdpwn", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   );

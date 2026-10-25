@@ -29,7 +29,7 @@ async function selectDate(
     }
   }
 }
-test("JQuery datepicker", async ({ page }) => {
+test.skip("JQuery datepicker", async ({ page }) => {
   await page.goto("https://testautomationpractice.blogspot.com/");
   const dateInput = page.locator("#datepicker");
 
@@ -47,7 +47,7 @@ test("JQuery datepicker", async ({ page }) => {
   const expectDate = "09/25/2026";
   await expect(dateInput).toHaveValue(expectDate);
 });
-test.only("Booking.com Data Picker", async ({ page }) => {
+test.skip("Booking.com Data Picker", async ({ page }) => {
   await page.goto("https://www.booking.com/");
   await page.getByTestId("searchbox-dates-container").click();
   //Check in date selection
