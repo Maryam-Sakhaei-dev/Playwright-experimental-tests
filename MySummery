@@ -1,0 +1,6 @@
+1-npm init playwright@latest
+2-npx playwright --version
+3-fixture- global variable
+4-npx playwright test -g "title"
+5-npx playwright test --ui (run line by line and debug)
+6->npx playwright test mytest.spec.ts --debug
