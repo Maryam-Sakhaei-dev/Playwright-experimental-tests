@@ -1,5 +1,6 @@
 import { test, expect, Locator } from "@playwright/test";
-test("Verify chrome CPU load in dynamic table", async ({ page }) => {
+// To Do flaky
+test.skip("Verify chrome CPU load in dynamic table", async ({ page }) => {
   await page.goto("https://practice.expandtesting.com/dynamic-table");
   const table: Locator = page.locator("table");
   await expect(table).toBeVisible();

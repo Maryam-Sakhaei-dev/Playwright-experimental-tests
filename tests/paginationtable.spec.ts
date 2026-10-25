@@ -35,7 +35,7 @@ test("Filter the rows and check the rows count", async ({ page }) => {
 });
 
 //ُSearch for specific Data
-test.only("Search for the specific data in a table", async ({ page }) => {
+test("Search for the specific data in a table", async ({ page }) => {
   await page.goto(
     "https://datatables.net/examples/basic_init/zero_configuration.html",
   );
@@ -48,7 +48,7 @@ test.only("Search for the specific data in a table", async ({ page }) => {
     for (let row of rows) {
       const text = await row.innerText();
       if (text.includes("Thor Walton")) {
-        console.log("found"); 
+        console.log("found");
         break;
       }
     }

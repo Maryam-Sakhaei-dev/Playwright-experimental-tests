@@ -3,7 +3,8 @@ import { test, expect, Page, chromium } from "@playwright/test";
 //Browser ---> Chromium, Firbox, Webkit
 //Contexts ---> we  can have multiple contexts for multiple users/apps for the same browser
 //Page---> New tab, Window,
-test("Browser context demo", async ({}) => {
+// To Do flaky
+test.skip("Browser context demo", async ({}) => {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();

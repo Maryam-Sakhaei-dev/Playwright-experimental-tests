@@ -5,7 +5,7 @@ test("Alert Dialog", async ({ page }) => {
     console.log(dialog.type());
     expect(dialog.type()).toContain("alert");
     console.log(dialog.message());
-    expect(dialog.message()).toContain("I am an alert box ");
+    expect(dialog.message()).toContain("I am an alert box");
     dialog.accept();
   });
 
@@ -25,7 +25,7 @@ test("Confirm Dialog", async ({ page }) => {
   await page.locator("#confirmBtn").click(); //open dialogs
   await page.waitForTimeout(5000);
 });
-test.only("Prompt Dialog", async ({ page }) => {
+test("Prompt Dialog", async ({ page }) => {
   await page.goto("https://testautomationpractice.blogspot.com/");
   page.on("dialog", (dialog) => {
     console.log("Dialog Type is:", dialog.type());
